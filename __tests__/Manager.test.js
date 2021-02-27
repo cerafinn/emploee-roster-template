@@ -1,1 +1,1 @@
-const check = require('../lib/manager')
+const Manager = require('../lib/manager')

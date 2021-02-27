@@ -1,5 +1,7 @@
-// create manager, engineer, intern, store and push to globalarray
+// create manager, then create team with a mix of engineer, intern, store and push to globalarray
 // choose what type of employee
+
+
 // when done, fs
 
 

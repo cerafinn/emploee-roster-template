@@ -1,1 +1,1 @@
-const check = require('../lib/intern')
+const Intern = require('../lib/intern')
