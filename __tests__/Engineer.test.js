@@ -1,3 +1,5 @@
 const Engineer = require('../lib/engineer')
 
-test
+// test role
+
+// test github setting and getting
