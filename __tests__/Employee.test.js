@@ -41,7 +41,7 @@ test('check that getEmail gets the email', () => {
   expect(instanceEmployee.getEmail()).toBe(email);
 });
 
-test('check that getRole gets the role', () => {
+test('check that getRole gets the role Employee', () => {
   const role = 'Employee';
   const instanceEmployee = new Employee('Anna', 1, 'test@example.com');
   expect(instanceEmployee.getRole()).toBe(role);
