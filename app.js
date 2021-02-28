@@ -5,13 +5,15 @@ const path = require('path');
 const Employee = require('./lib/Employee')
 const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
-const Intern = require('./lib/Intern')
+const Intern = require('./lib/Intern');
+const { create } = require('domain');
 
 const teamArray = []
 
 function teamGenerator() {
 
   function createManager() {
+    // this needs to start the app, not create team member!
     inquirer.prompt ([
       {
         type: 'input',
@@ -34,9 +36,11 @@ function teamGenerator() {
         message: "Enter the team manager's office number:"
       }
     ])
-    // inquirer prompt for manager -- this needs to come first!
-    // and push to array
-    // and loop to createTeam
+    .then(answers => {
+      const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+      teamArray.push(manager);
+      createTeamMember();
+    })
   }
 
   function createEngineer() {
@@ -62,10 +66,11 @@ function teamGenerator() {
         message: "Enter the engineer's GitHub username:"
       }
     ])
-
-    // inquirer prompts for engineer
-    // and push to array
-    // and loop to createTeam
+    .then(answers => {
+      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGitHub);
+      teamArray.push(engineer);
+      createTeamMember();
+    })
   }
 
   function createIntern() {
@@ -91,12 +96,14 @@ function teamGenerator() {
         message: "Enter the intern's school name:"
       }
     ])
-    // inquirer prompts for intern
-    // and push to array
-    // and loop to createTeam
+    .then(answers => {
+      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+      teamArray.push(intern);
+      createTeamMember();
+    })
   }
 
-  function createTeam() {
+  function createTeamMember() {
     inquirer
       .prompt({
         type: 'list',
@@ -123,6 +130,8 @@ function teamGenerator() {
   function generateTeam() {
     // output to html, write file from template to distro file
   }
-}
 
-teamGenerator().createManager();
+  createManager();
+};
+
+teamGenerator();
