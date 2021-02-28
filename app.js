@@ -1,9 +1,40 @@
-// create manager, then create team with a mix of engineer, intern, store and push to globalarray
-// choose what type of employee
+const inquirer = require('inquirer');
+const fs = require('fs');
+const path = require('path');
 
+const Employee = require('./lib/Employee')
+const Manager = require('./lib/Manager')
+const Engineer = require('./lib/Engineer')
+const Intern = require('./lib/Intern')
 
-// when done, fs
+const teamArray = []
 
+function teamGenerator() {
+  function createManager() {
+    // inquirer prompt for manager -- this needs to come first!
+    // and push to array
+  }
 
+  function createEngineer() {
+    // inquirer prompts for engineer
+    // and push to array
+    // and loop to createTeam
+  }
 
-// other file with function to create cards based on employee type (3) and function to create HTML (include inline or in header css)
+  function createIntern() {
+    // inquirer prompts for intern
+    // and push to array
+    // and loop to createTeam
+  }
+
+  function createTeam() {
+    // after manager, ask what the next team member should be
+    // on loops, also ask if they're done adding members
+  }
+
+  function generateTeam() {
+    // output to html, write file from template to distro file
+  }
+}
+
+teamGenerator().createManager();

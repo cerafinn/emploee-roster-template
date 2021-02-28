@@ -1,4 +1,4 @@
-const Engineer = require('../lib/engineer')
+const Engineer = require('../lib/Engineer')
 
 // test role
 test('check that getRole gets the role Engineer', () => {

@@ -1,4 +1,4 @@
-const Manager = require('../lib/manager')
+const Manager = require('../lib/Manager')
 
 // test role
 test('check that getRole gets the role Manager', () => {
