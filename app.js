@@ -2,13 +2,15 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
 
-const HTML = require('./src/html-template');
+const generatePage = require('./src/html-template');
 
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 const teamArray = []
+
+// need to add validation so only numbers can be entered for the id
 
 function teamGenerator() {
   console.log(`
@@ -18,7 +20,6 @@ function teamGenerator() {
   `)
 
   function createManager() {
-    // this needs to start the app, not create team member!
     inquirer.prompt ([
       {
         type: 'input',
