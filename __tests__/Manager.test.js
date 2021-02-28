@@ -8,14 +8,14 @@ test('check that getRole gets the role Manager', () => {
 });
 
 // test number setting and getting
-test('setting number through the app', () => {
+test('setting office number through the app', () => {
   const number = 'officeNumber';
   const instanceManager = new Manager('Anna', 1, 'test@example.com', number);
-  expect(instanceManager.number).toBe(number);
+  expect(instanceManager.officeNumber).toBe(number);
 });
 
-test('check that getnumber gets the numbername', () => {
+test('check that getNumber gets the office number set', () => {
   const number = 'officeNumber';
   const instanceManager = new Manager('Anna', 1, 'test@example.com', number);
-  expect(instanceManager.getnumber()).toBe(number);
+  expect(instanceManager.getNumber()).toBe(number);
 });
