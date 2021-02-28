@@ -19,7 +19,7 @@ Table of Contents |
 
 In order to run the project locally, ensure that dependencies are installed by running:
 
-npm install
+`npm install`
 
 <br />
 
