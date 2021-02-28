@@ -129,8 +129,6 @@ function teamGenerator() {
             generateTeam();
         }
       })
-    // after manager, ask what the next team member should be
-    // on loops, also ask if they're done adding members
   }
 
   function generateTeam() {
