@@ -136,6 +136,7 @@ function teamGenerator() {
   function generateTeam() {
     console.log(teamArray)
     // output to html, write file from template to distro file
+    fs.writeFileSync(path.join(process.cwd(), "./dist/generatedTeam.html"), generatePage(teamArray));
   }
 
   createManager();
