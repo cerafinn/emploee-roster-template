@@ -34,6 +34,8 @@ Live output example: [Live output](https://cerafinn.github.io/team-profile-gener
 
 Repo Link: [Repo Link](https://github.com/cerafinn/team-profile-generator)
 
+![Generated Page](./assets/team-profile-generator.png)
+
 <br />
 
 ## Contributing
