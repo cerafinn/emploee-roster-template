@@ -49,7 +49,7 @@ Repo Link: [Repo Link](https://github.com/cerafinn/team-profile-generator)
 
 ## Screenshots
 
-![IMG](./assets/images/team-profile-generator-screenshot.png)
+![IMG](/assets/team-profile-generator-screenshot.png)
 
 Live output example: [Live output](https://cerafinn.github.io/team-profile-generator)
 
